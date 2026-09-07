@@ -1,0 +1,53 @@
+# Helvetium Alps examples
+
+Every example is included in `examples/tsconfig.json` and is compiled in the release validation suite. Database SDKs are represented by structural clients so the examples remain dependency-free unless they intentionally demonstrate Helvetium Boot integration.
+
+- `01-postgres-query-builder.ts`
+- `02-mysql-query-builder.ts`
+- `03-sqlite-schema.ts`
+- `04-mssql-pagination.ts`
+- `05-raw-sql.ts`
+- `06-transactions.ts`
+- `07-savepoints.ts`
+- `08-repository.ts`
+- `09-optimistic-locking.ts`
+- `10-soft-deletes.ts`
+- `11-offset-pagination.ts`
+- `12-cursor-pagination.ts`
+- `13-migrations.ts`
+- `14-schema-editor.ts`
+- `15-model-relations.ts`
+- `16-unit-of-work.ts`
+- `17-query-hooks.ts`
+- `18-query-retries.ts`
+- `19-multiple-databases.ts`
+- `20-read-replicas.ts`
+- `21-connection-pool.ts`
+- `22-memory-documents.ts`
+- `23-document-updates.ts`
+- `24-document-transactions.ts`
+- `25-mongodb-adapter.ts`
+- `26-dynamodb-adapter.ts`
+- `27-couchdb-adapter.ts`
+- `28-memory-key-value.ts`
+- `29-redis-adapter.ts`
+- `30-valkey-adapter.ts`
+- `31-health-checks.ts`
+- `32-seeding.ts`
+- `33-boot-middleware.ts`
+- `34-boot-health-endpoint.ts`
+- `35-tenant-databases.ts`
+- `36-sql-expression-composition.ts`
+- `37-bulk-document-write.ts`
+- `38-negative-document-filter.ts`
+- `39-migration-status.ts`
+- `40-schema-foreign-key.ts`
+- `41-composite-query.ts`
+- `42-soft-delete-admin-view.ts`
+- `43-pool-health.ts`
+- `44-database-shutdown.ts`
+- `45-data-access-layer.ts`
+- `46-document-projection.ts`
+- `47-kv-conditional-set.ts`
+- `48-complete-stack.ts`
+- `49-helvetium-boot-real.ts`
