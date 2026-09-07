@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/newfoundcodes/newfoundcodes-logo/refs/heads/main/newfoundcodes-helvetium.png?token=GHSAT0AAAAAAEFYS666XTWRA7CFPKWMB3N22U65F3Q" width="128" />
+  <img src="https://github.com/newfoundcodes/newfoundcodes-logo/blob/main/newfoundcodes-helvetium.png?raw=true" width="128" />
   <h1>Helvetium Alps</h1>
   <p>
     <a href="https://github.com/newfoundcodes/helvetium-alps/actions"><img src="https://github.com/newfoundcodes/helvetium-alps/actions/workflows/ci.yml/badge.svg" alt="Build Status"></a>
