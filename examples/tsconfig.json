@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "paths": {
+      "@newfoundcodes/helvetium-alps": ["../src/index.ts"],
+      "@newfoundcodes/helvetium-alps/sql": ["../src/sql/index.ts"],
+      "@newfoundcodes/helvetium-alps/nosql": ["../src/nosql/index.ts"],
+      "@newfoundcodes/helvetium-alps/adapters": ["../src/adapters/index.ts"],
+      "@newfoundcodes/helvetium-alps/boot": ["../src/integration/boot.ts"],
+      "@newfoundcodes/helvetium-boot": ["../test-support/boot.ts"],
+      "@newfoundcodes/helvetium-boot/node": ["../test-support/boot-node.ts"]
+    }
+  },
+  "include": ["./*.ts", "../test-support/*.ts"]
+}
