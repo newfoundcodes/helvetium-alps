@@ -1,0 +1,71 @@
+{
+  "name": "@newfoundcodes/helvetium-alps",
+  "version": "0.1.0",
+  "description": "A database, ORM, query builder, migration, transaction, repository, pooling, and multi-database framework for Helvetium.",
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./sql": {
+      "types": "./dist/sql/index.d.ts",
+      "import": "./dist/sql/index.js"
+    },
+    "./nosql": {
+      "types": "./dist/nosql/index.d.ts",
+      "import": "./dist/nosql/index.js"
+    },
+    "./adapters": {
+      "types": "./dist/adapters/index.d.ts",
+      "import": "./dist/adapters/index.js"
+    },
+    "./boot": {
+      "types": "./dist/integration/boot.d.ts",
+      "import": "./dist/integration/boot.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "clean": "rm -rf dist coverage site",
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "examples:typecheck": "tsc -p examples/tsconfig.json --noEmit",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "coverage": "npm run build && node --experimental-test-coverage --test tests/*.test.mjs",
+    "prepublishOnly": "npm run typecheck && npm run examples:typecheck && npm test",
+    "docs:setup": "node scripts/docs.mjs setup",
+    "docs:serve": "node scripts/docs.mjs serve",
+    "docs:build": "node scripts/docs.mjs build"
+  },
+  "peerDependencies": {
+    "@newfoundcodes/helvetium-boot": "0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@newfoundcodes/helvetium-boot": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/node": "^26.4.1",
+    "eslint": "^10.10.0",
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.69.0"
+  }
+}
