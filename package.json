@@ -47,10 +47,7 @@
     "examples:typecheck": "tsc -p examples/tsconfig.json --noEmit",
     "test": "npm run build && node --test tests/*.test.mjs",
     "coverage": "npm run build && node --experimental-test-coverage --test tests/*.test.mjs",
-    "prepublishOnly": "npm run typecheck && npm run examples:typecheck && npm test",
-    "docs:setup": "node scripts/docs.mjs setup",
-    "docs:serve": "node scripts/docs.mjs serve",
-    "docs:build": "node scripts/docs.mjs build"
+    "prepublishOnly": "npm run typecheck && npm run examples:typecheck && npm test"
   },
   "peerDependencies": {
     "@newfoundcodes/helvetium-boot": "0.1.0"
