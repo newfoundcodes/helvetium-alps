@@ -33,4 +33,5 @@ const alps = new Alps({
     },
   ],
 }).register('main', postgres({ query: async () => ({ rows: [], rowCount: 0 }) }));
+
 await alps.sql().query('SELECT 1');
