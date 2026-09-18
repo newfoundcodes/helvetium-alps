@@ -29,4 +29,5 @@ for (const tenant of ['acme', 'globex']) {
   alps.register(`tenant:${tenant}`, new MemoryDocumentAdapter());
 }
 
-await alps.documents('tenant:acme').collection('orders').insertOne({ id: 'o1' });
+const result = await alps.documents('tenant:acme').collection('orders').insertOne({ id: 'o1' });
+console.log(result);
