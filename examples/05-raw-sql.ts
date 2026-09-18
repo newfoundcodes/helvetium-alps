@@ -32,4 +32,5 @@ const db = new Alps()
   .sql();
 
 const email = 'user@example.com';
-console.log(await db.query(sql`SELECT * FROM ${identifier('users')} WHERE email=${email}`));
+const result = await db.query(sql`SELECT * FROM ${identifier('users')} WHERE email=${email}`);
+console.log(JSON.stringify(result, null, 2));
