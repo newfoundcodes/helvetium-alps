@@ -30,4 +30,5 @@ const Post = defineModel({
   table: defineTable('posts', { id: types.integer(), userId: types.integer() }),
 });
 
-console.log(hasMany(Post, 'userId'), belongsTo(User, 'userId'));
+console.log('hasMany: ', JSON.stringify(hasMany(Post, 'userId'), null, 2));
+console.log('belongsTo: ', JSON.stringify(belongsTo(User, 'userId'), null, 2));
