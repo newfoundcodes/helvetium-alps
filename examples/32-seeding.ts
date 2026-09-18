@@ -25,7 +25,7 @@
 import { Alps, defineSeeder, seed, MemoryDocumentAdapter } from '@newfoundcodes/helvetium-alps';
 
 const alps = new Alps().register('docs', new MemoryDocumentAdapter());
-await seed(alps, [
+const result = await seed(alps, [
   defineSeeder('roles', async (a) => {
     await a
       .documents('docs')
@@ -33,3 +33,5 @@ await seed(alps, [
       .insertMany([{ name: 'admin' }, { name: 'user' }]);
   }),
 ]);
+
+console.log(result);
