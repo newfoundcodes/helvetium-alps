@@ -32,3 +32,5 @@ await db.transaction((tx) =>
     await nested.query('INSERT INTO audit(message) VALUES($1)', ['nested']);
   }),
 );
+
+console.log(JSON.stringify(db, null, 2));
