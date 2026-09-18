@@ -61,7 +61,7 @@ export class ConnectionPool<T extends Disposable> implements Disposable {
   private readonly min: number;
   private readonly idleTimeoutMs: number;
   private readonly acquireTimeoutMs: number;
-private idle: Idle<T>[] = [];
+  private idle: Idle<T>[] = [];
   private active = new Set<T>();
   private waiters: Waiter<T>[] = [];
   private total = 0;
