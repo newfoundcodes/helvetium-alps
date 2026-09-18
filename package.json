@@ -58,6 +58,7 @@
     }
   },
   "devDependencies": {
+    "@newfoundcodes/helvetium-boot": "0.1.0",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/node": "^26.4.1",
     "eslint": "^10.10.0",
