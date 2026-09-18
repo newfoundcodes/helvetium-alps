@@ -31,11 +31,17 @@ const alps = new Alps().register('cache', new MemoryKeyValueAdapter());
 const app = createApp();
 
 app.use(alpsMiddleware(alps) as never);
-app.get('/api/cache/:key', async (c) =>
+app.get('/api/cache/get/:key', async (c) =>
   c.json({
     value: await getAlps(c).kv('cache').get(c.req.param('key')!),
   }),
 );
+app.get('/api/cache/set/:key/:value', async (c) => {
+  await getAlps(c).kv('cache').set(c.req.param('key')!, c.req.param('value')!);
+  c.json({
+    ok: true,
+  });
+});
 
 mountAlpsHealth(app as { get: (p: string, h: unknown) => unknown }, alps);
 serve({ app, port: 3000 });
