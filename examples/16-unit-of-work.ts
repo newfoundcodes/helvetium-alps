@@ -30,7 +30,17 @@ const db = new Alps()
 
 const work = new UnitOfWork(db);
 work
-  .add((tx) => tx.query('INSERT INTO users(name) VALUES($1)', ['Alice']))
-  .add((tx) => tx.query('INSERT INTO audit(message) VALUES($1)', ['created user']));
+  .add(async (tx) => {
+    const result = await tx.query('INSERT INTO users(name) VALUES($1)', ['Alice']);
+
+    console.log(result);
+    return result;
+  })
+  .add(async (tx) => {
+    const result = await tx.query('INSERT INTO audit(message) VALUES($1)', ['created user']);
+
+    console.log(result);
+    return result;
+  });
 
 await work.commit();
