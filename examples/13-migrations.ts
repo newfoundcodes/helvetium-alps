@@ -52,3 +52,4 @@ const migrator = new Migrator(db).register(
 );
 
 console.log(await migrator.up());
+console.log(await migrator.down());
