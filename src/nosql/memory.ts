@@ -362,7 +362,7 @@ export class MemoryDocumentAdapter implements DocumentAdapter {
 export class MemoryKeyValueAdapter implements KeyValueAdapter {
   readonly kind = 'keyvalue' as const;
   readonly capabilities = { transactions: true, ttl: true, watch: true };
-private data = new Map<string, KVRecord>();
+  private data = new Map<string, KVRecord>();
   private lock = Promise.resolve();
 
   private record(key: string): KVRecord | undefined {
