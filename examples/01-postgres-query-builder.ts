@@ -39,4 +39,5 @@ const query = new SelectBuilder('postgres')
   .limit(20)
   .compile();
 
-console.log(await alps.sql().query(query));
+const result = await alps.sql().query(query);
+console.log(JSON.stringify(result, null, 2));
