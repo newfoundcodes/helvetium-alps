@@ -1,6 +1,6 @@
 {
   "name": "@newfoundcodes/helvetium-alps",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A database, ORM, query builder, migration, transaction, repository, pooling, and multi-database framework for Helvetium.",
   "type": "module",
   "license": "AGPL-3.0-only",
