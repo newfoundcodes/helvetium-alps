@@ -1,6 +1,6 @@
 {
   "name": "@newfoundcodes/helvetium-alps",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A database, ORM, query builder, migration, transaction, repository, pooling, and multi-database framework for Helvetium.",
   "type": "module",
   "license": "AGPL-3.0-only",
@@ -50,7 +50,7 @@
     "prepublishOnly": "npm run typecheck && npm run examples:typecheck && npm test"
   },
   "devDependencies": {
-    "@newfoundcodes/helvetium-boot": ">=0.1.0",
+    "@newfoundcodes/helvetium-boot": ">=0.1.3",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/node": "^26.4.1",
     "eslint": "^10.10.0",
